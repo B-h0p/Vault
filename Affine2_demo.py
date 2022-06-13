@@ -15,7 +15,7 @@ def encrypt(url="https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE",
             increment += 1
     return "".join(url_chars)
 
-def decrypt(url="https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", eq=[32,19,5]):
+def decrypt(url="lfxvk://kqg.iiilafq.gue/kudmb?j=y97Re0g55_k&gt_qbkxhsd=QMXXRW", eq=[32,19,5]):
     url_chars = list(url)
     increment = 1
     for x in range(len(url_chars)):
