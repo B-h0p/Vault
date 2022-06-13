@@ -22,13 +22,11 @@ def decrypt(url, eq):
         elif url_chars[x].isupper(): ascii_val, make_shift = 65, True
         if make_shift:
             new_sum = 0
-            for y in range(len(eq)): new_sum = new_sum + (eq[y] * (increment ** y)) #creates a polynomial that is binded to each alpha
+            for y in range(len(eq)): new_sum = new_sum + (eq[y] * (increment ** y))
             url_chars[x] = chr((ord(url_chars[x]) - (new_sum%26) - ascii_val) % 26 + ascii_val)
             increment += 1 #so our cypher is never constant
     return "".join(url_chars)
 
-print(encrypt("https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", [32,19,5]))
+print(encrypt("https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", [32,19,5])) #examples - note that the key can be n-elements long
 print(decrypt(encrypt("https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", [32,19,5]),[32,19,5]))
-print(decrypt("nhxra://sos.oqsurk.qso", [58,22,4])) #demo which was produced by a randomised dt.json
-
-#I could of made them a single function but I wasnt bothered lol
+#I could of made it a single function but I wasnt bothered lol
