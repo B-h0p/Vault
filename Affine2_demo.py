@@ -31,4 +31,4 @@ print(encrypt("https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", [
 print(decrypt(encrypt("https://www.youtube.com/watch?v=g97La0u55_g&ab_channel=KILTLE", [32,19,5]),[32,19,5]))
 print(decrypt("nhxra://sos.oqsurk.qso", [58,22,4])) #demo which was produced by a randomised dt.json
 
-#I could of made them a single function but really I wasnt bothered lol
+#I could of made them a single function but I wasnt bothered lol
